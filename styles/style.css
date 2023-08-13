@@ -1,6 +1,38 @@
-body{
+body {
     text-align: center;
 }
-#input-num{
+
+.title {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+.tag-line {
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+#input-num {
     padding: 10px 5px;
+    text-align: center;
+}
+
+#with-tex {
+    color: orangered;
+}
+
+#get-btn {
+    background-color: rgb(86, 137, 231);
+    padding: 10px;
+    border: none;
+    color: white;
+    border-radius: 3px;
+}
+
+#clean-btn {
+    background-color: rgb(229, 100, 100);
+    padding: 10px;
+    border: none;
+    color: white;
+    border-radius: 3px;
 }

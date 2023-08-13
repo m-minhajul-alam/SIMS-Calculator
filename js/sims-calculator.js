@@ -8,8 +8,12 @@ document.getElementById('get-btn').addEventListener('click', function () {
         const fullNum = Math.round(addTex);
         return fullNum;
     }
-    
+
     const theTex = addTex(inputText)
 
     document.getElementById('with-tex').innerText = theTex;
+
+    document.getElementById('clean-btn').addEventListener('click', function () {
+        inputFeld.value = '';
+    })
 })
