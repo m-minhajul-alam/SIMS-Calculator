@@ -24,7 +24,8 @@ body {
 }
 
 #num-with-tax,
-#num-tax {
+#num-tax,
+#num-tax2 {
     color: orangered;
     font-size: x-large;
     font-weight: bold;
