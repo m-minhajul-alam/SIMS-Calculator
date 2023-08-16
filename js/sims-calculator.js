@@ -3,11 +3,13 @@ function theTex(price) {
     const theTex = Math.round(findText)
     return theTex;
 }
+
 function addTex(price) {
     const findText = ((price / 95.5) * 4.5);
     const addTex = Math.round(Number(price) + findText);
     return addTex;
 }
+
 document.getElementById('get-tax-btn').addEventListener('click', function () {
     const priceTax = theTex(document.getElementById('input-num').value)
     const priceWithTax = addTex(document.getElementById('input-num').value)
@@ -20,6 +22,7 @@ document.getElementById('get-tax-btn').addEventListener('click', function () {
         document.getElementById('num-with-tax').innerText = priceWithTax;
     }
 })
+
 document.getElementById('input-num').addEventListener('keyup', function (event) {
     if (event.key === "Enter") {
         const priceTax = theTex(document.getElementById('input-num').value)
@@ -34,6 +37,7 @@ document.getElementById('input-num').addEventListener('keyup', function (event) 
         }
     }
 })
+
 document.getElementById('clean-btn').addEventListener('click', function () {
     document.getElementById('input-num').value = '';
     document.getElementById('num-tax').innerText = '00';
