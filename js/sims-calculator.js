@@ -6,15 +6,15 @@ function theTex(price) {
 
 function addTex(price) {
     const findText = ((price / 95.5) * 4.5);
-    const finalPrice = Math.round(parseFloat(price) + findText);
-    return finalPrice;
+    const addTex = Math.round(Number(price) + findText);
+    return addTex;
 }
 
 document.getElementById('get-tax-btn').addEventListener('click', function () {
     const priceTax = theTex(document.getElementById('input-num').value)
     const priceWithTax = addTex(document.getElementById('input-num').value)
     if (priceWithTax < 1) {
-        alert('Please, Use numbers greater than 0 for tax. Thank you.');
+        alert('Please, type numbers greater than 0 for tax. Thank you.');
         document.getElementById('input-num').value = '';
         return;
     } else {
@@ -28,7 +28,7 @@ document.getElementById('input-num').addEventListener('keyup', function (event) 
         const priceTax = theTex(document.getElementById('input-num').value)
         const priceWithTax = addTex(document.getElementById('input-num').value)
         if (priceWithTax < 1) {
-            alert('Please, Use numbers greater than 0 for tax. Thank you.');
+            alert('Please, type numbers greater than 0 for tax. Thank you.');
             document.getElementById('input-num').value = '';
             return;
         } else {
