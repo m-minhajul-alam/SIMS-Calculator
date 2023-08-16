@@ -17,11 +17,13 @@ body {
     text-align: center;
 }
 
-#with-tex {
+#num-with-tax {
     color: orangered;
+    font-size: x-large;
+    font-weight: bold;
 }
 
-#get-btn {
+#add-tax-btn {
     background-color: rgb(86, 137, 231);
     padding: 10px;
     border: none;

@@ -1,19 +1,20 @@
-document.getElementById('get-btn').addEventListener('click', function () {
-    const inputFeld = document.getElementById('input-num');
-    const inputText = inputFeld.value;
+function addTex(price) {
+    const findText = ((price / 95.5) * 4.5);
+    const finalPrice = Math.round(parseFloat(price) + findText);
+    return finalPrice;
+}
 
-    function addTex(price) {
-        const findText = ((price / 95.5) * 4.5);
-        const addTex = Number(price) + Number(findText);
-        const fullNum = Math.round(addTex);
-        return fullNum;
+document.getElementById('add-tax-btn').addEventListener('click', function () {
+    const priceWithTax = addTex(document.getElementById('input-num').value)
+    if (priceWithTax < 1) {
+        alert('Please, Use numbers greater than 0 for tax. Thank you.')
+        return;
+    } else {
+        document.getElementById('num-with-tax').innerText = priceWithTax;
     }
+})
 
-    const theTex = addTex(inputText)
+document.getElementById('clean-btn').addEventListener('click', function () {
+    document.getElementById('input-num').value = '';
 
-    document.getElementById('with-tex').innerText = theTex;
-
-    document.getElementById('clean-btn').addEventListener('click', function () {
-        inputFeld.value = '';
-    })
 })
