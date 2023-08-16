@@ -13,22 +13,24 @@ body {
 }
 
 .hr-line {
-    width: 200px;
+    width: 230px;
 }
 
 #input-num {
     margin-top: 15px;
+    margin-bottom: 8px;
     padding: 10px 5px;
     text-align: center;
 }
 
-#num-with-tax {
+#num-with-tax,
+#num-tax {
     color: orangered;
     font-size: x-large;
     font-weight: bold;
 }
 
-#add-tax-btn {
+#get-tax-btn {
     background-color: rgb(86, 137, 231);
     padding: 10px;
     border: none;
