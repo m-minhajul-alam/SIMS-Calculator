@@ -4,15 +4,20 @@ body {
 
 .title {
     margin-bottom: 0px;
-    padding-bottom: 0px;
 }
 
 .tag-line {
     margin-top: 0px;
-    padding-top: 0px;
+    font-weight: inherit;
+    font-size: small;
+}
+
+.hr-line {
+    width: 200px;
 }
 
 #input-num {
+    margin-top: 15px;
     padding: 10px 5px;
     text-align: center;
 }
@@ -29,6 +34,11 @@ body {
     border: none;
     color: white;
     border-radius: 3px;
+    font-weight: bold;
+}
+
+#add-tax-btn:hover {
+    background-color: darkblue;
 }
 
 #clean-btn {
@@ -37,4 +47,9 @@ body {
     border: none;
     color: white;
     border-radius: 3px;
+    font-weight: bold;
+}
+
+#clean-btn:hover {
+    background-color: brown;
 }
