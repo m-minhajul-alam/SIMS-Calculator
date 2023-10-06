@@ -58,6 +58,11 @@ input {
     cursor: pointer;
     touch-action: manipulation;
     user-select: none;
+    outline: none;
+}
+
+.numeric-button:active {
+    outline: 2px solid transparent;
 }
 
 .numeric-button:hover {
