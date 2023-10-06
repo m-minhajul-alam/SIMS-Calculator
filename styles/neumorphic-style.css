@@ -57,6 +57,7 @@ input {
     margin-top: 10px;
     cursor: pointer;
     touch-action: manipulation;
+    user-select: none;
 }
 
 .numeric-button:hover {
