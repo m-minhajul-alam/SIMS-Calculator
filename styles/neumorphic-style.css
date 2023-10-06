@@ -1,0 +1,146 @@
+body {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.neumorphic-container {
+    background-color: #ffffff;
+    border-radius: 20px;
+    border: 1px solid #d0d0d0;
+    box-shadow: 10px 10px 20px #bcbcbc, -10px -10px 20px #ffffff;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+}
+
+input {
+    width: fit-content;
+    padding: 20px;
+    margin-top: 0px;
+    border: none;
+    outline: none;
+    border: 1px solid #d0d0d0;
+    background-color: #ffffff;
+    box-shadow: inset 5px 5px 10px #bcbcbc, inset -5px -5px 10px #ffffff;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.numeric-keypad {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.numeric-button {
+    width: 40px;
+    padding: 10px;
+    height: 40px;
+    background-color: #ffffff;
+    border: 1px solid #d0d0d0;
+    box-shadow: 5px 5px 10px #bcbcbc, -5px -5px 10px #ffffff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    margin: 2px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.numeric-button:hover {
+    background-color: #eeeeee;
+}
+
+.numeric-button.clear {
+    color: #ff0000;
+}
+
+.numeric-button.calculate {
+    color: #00cc00;
+}
+
+/* Style the moon and sun icons */
+.toggle-mode {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.moon-icon,
+.sun-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    transition: transform 0.2s;
+}
+
+/* Initially hide the sun icon */
+.sun-icon {
+    display: none;
+}
+
+/* Night mode styles */
+body.night-mode {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+body.night-mode .moon-icon {
+    display: none;
+}
+
+body.night-mode .sun-icon {
+    display: inline-block;
+    transform: rotate(180deg);
+}
+
+/* Invert colors for all elements within night mode */
+body.night-mode .neumorphic-container {
+    background-color: #000000;
+    color: #ffffff;
+    box-shadow: none;
+}
+
+body.night-mode input {
+    background-color: #000000;
+    color: #ffffff;
+    box-shadow: none;
+}
+
+body.night-mode .numeric-button {
+    background-color: #000000;
+    color: #ffffff;
+    box-shadow: none;
+}
+
+body.night-mode .numeric-button.clear {
+    color: #ff0000;
+}
+
+body.night-mode .numeric-button.calculate {
+    color: #00cc00;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    text-align: start;
+    margin-bottom: 10px;
+}
+
+.nav-title {
+    margin: 0;
+}

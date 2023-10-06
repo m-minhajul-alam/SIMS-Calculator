@@ -4,30 +4,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SIMS Claculator</title>
-    <link rel="shortcut icon" href="assets/icons/sims-calculator.jpg" type="image/x-icon">
-    <link rel="stylesheet" href="styles/style.css">
+    <title>SIMS Calculator</title>
+    <link rel="shortcut icon" href="assets/icons/sims-calculator.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles/neumorphic-style.css">
 </head>
 
 <body>
-    <header>
-        <h1 class="title">The SIMS Claculator</h1>
-        <hr class="hr-line">
-        <p class="tag-line">to claculate your price tax</p>
-    </header>
     <main>
         <section>
-            <div>
-                <input type="number" id="input-num" placeholder="Type a price (tk).">
-                <br>
-                <button id="get-tax-btn">Get Tax</button>
-                <button id="clean-btn">Clean</button>
-                <br>
-                <p>Price Tax: <span id="num-tax">00</span> tk</p>
-                <p>Price With Tax: <span id="num-with-tax">00</span> tk</p>
-                <div id="top-sheet-tax-div">
-                    <p id="top-sheet-tax">Price Tax (for top-sheet): <span id="num-tax2">00</span> tk</p>
-                    <p id="top-sheet-tax-alert">N.B: This tax number is only for top-sheet.</p>
+            <div class="neumorphic-container">
+                <div class="nav">
+                    <h4 class="nav-title">SIMS Calculator</h4>
+                    <div class="toggle-mode" id="toggle-mode">
+                        <img src="/assets/icons/moon.png" alt="Moon" class="moon-icon" id="moon-icon">
+                        <img src="/assets/icons/sun.png" alt="Sun" class="sun-icon" id="sun-icon">
+                    </div>
+                </div>
+                <input type="number" id="input-num" placeholder="Type here...">
+                <div class="numeric-keypad">
+                    <div class="numeric-row">
+                        <div class="numeric-button" data-value="7">7</div>
+                        <div class="numeric-button" data-value="4">4</div>
+                        <div class="numeric-button" data-value="1">1</div>
+                        <div class="numeric-button clear" data-value="C">C</div>
+                    </div>
+                    <div class="numeric-row">
+                        <div class="numeric-button" data-value="8">8</div>
+                        <div class="numeric-button" data-value="5">5</div>
+                        <div class="numeric-button" data-value="2">2</div>
+                        <div class="numeric-button" data-value="0">0</div>
+                    </div>
+                    <div class="numeric-row">
+                        <div class="numeric-button" data-value="9">9</div>
+                        <div class="numeric-button" data-value="6">6</div>
+                        <div class="numeric-button" data-value="3">3</div>
+                        <div class="numeric-button calculate" data-value="=">=</div>
+                    </div>
                 </div>
             </div>
         </section>

@@ -1,56 +1,44 @@
-function billTex(price) {
-    const findText = ((price / 95.5) * 4.5);
-    const billTex = Math.round(findText)
-    return billTex;
-}
-
 function addTex(price) {
-    const findText = ((price / 95.5) * 4.5);
-    const addTex = Math.round(Number(price) + findText);
-    return addTex;
-}
-
-function topSheetTex(price) {
-    const findText = ((price / 100) * 4.5);
-    const topSheetTex = Math.round(findText);
-    return topSheetTex;
-}
-
-document.getElementById('get-tax-btn').addEventListener('click', function () {
-    const priceTax = billTex(document.getElementById('input-num').value)
-    const priceWithTax = addTex(document.getElementById('input-num').value)
-    const priceTax2 = topSheetTex(document.getElementById('input-num').value)
-    if (priceWithTax < 1) {
-        alert('Please, type numbers greater than 0 for tax. Thank you.');
-        document.getElementById('input-num').value = '';
-        return;
-    } else {
-        document.getElementById('num-tax').innerText = priceTax;
-        document.getElementById('num-tax2').innerText = priceTax2;
-        document.getElementById('num-with-tax').innerText = priceWithTax;
+    const inputValue = parseFloat(document.getElementById('input-num').value);
+    if (!isNaN(inputValue)) {
+        const findText = ((price / 95.5) * 4.5);
+        const result = Math.round(Number(price) + findText);
+        document.getElementById('input-num').value = result;
     }
-})
+}
 
-document.getElementById('input-num').addEventListener('keyup', function (event) {
-    if (event.key === "Enter") {
-        const priceTax = billTex(document.getElementById('input-num').value)
-        const priceWithTax = addTex(document.getElementById('input-num').value)
-        const priceTax2 = topSheetTex(document.getElementById('input-num').value)
-        if (priceWithTax < 1) {
-            alert('Please, type numbers greater than 0 for tax. Thank you.');
-            document.getElementById('input-num').value = '';
-            return;
+document.querySelectorAll('.numeric-button').forEach(button => {
+    button.addEventListener('click', function () {
+        const value = this.getAttribute('data-value');
+        const inputField = document.getElementById('input-num');
+
+        if (value === '=') {
+            addTex(inputField.value);
+
+        } else if (value === 'C') {
+            inputField.value = '';
         } else {
-            document.getElementById('num-tax').innerText = priceTax;
-            document.getElementById('num-tax2').innerText = priceTax2;
-            document.getElementById('num-with-tax').innerText = priceWithTax;
+            inputField.value += value;
         }
-    }
-})
+    });
+});
 
-document.getElementById('clean-btn').addEventListener('click', function () {
-    document.getElementById('input-num').value = '';
-    document.getElementById('num-tax').innerText = '00';
-    document.getElementById('num-with-tax').innerText = '00';
-    document.getElementById('num-tax2').innerText = '00';
-})
+// JavaScript to toggle between day and night modes
+const toggleMode = document.getElementById('toggle-mode');
+const body = document.body;
+const moonIcon = document.getElementById('moon-icon');
+const sunIcon = document.getElementById('sun-icon');
+
+toggleMode.addEventListener('click', function () {
+    if (body.classList.contains('night-mode')) {
+        // Switch to day mode
+        body.classList.remove('night-mode');
+        moonIcon.style.display = 'inline-block';
+        sunIcon.style.display = 'none';
+    } else {
+        // Switch to night mode
+        body.classList.add('night-mode');
+        moonIcon.style.display = 'none';
+        sunIcon.style.display = 'inline-block';
+    }
+});
